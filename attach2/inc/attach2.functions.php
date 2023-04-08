@@ -802,7 +802,8 @@ function att_cot_thumb($source, $target, $width, $height, $resize = 'crop', $qua
 			break;
 	}
 
-	imagecopyresampled($newimage, $oldimage, $x_pos, $y_pos, 0, 0, (int)$width, (int)$height, (int)$width_orig, (int)$height_orig);
+	//imagecopyresampled($newimage, $oldimage, $x_pos, $y_pos, 0, 0, (int)$width, (int)$height, (int)$width_orig, (int)$height_orig);
+	imagecopyresampled($newimage, $oldimage, $x_pos, $y_pos, 0, 0, $width, $height, $width_orig, $height_orig);
 
 	switch ($ext)
 	{
